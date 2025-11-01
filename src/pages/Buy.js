@@ -11,7 +11,7 @@ function Buy() {
     {
       id: 1,
       name: 'Individual tinkering activity',
-      amount: 1,
+      amount: 50,
       description: null
     },
     {
@@ -31,7 +31,7 @@ function Buy() {
   const handleBuyNow = (product) => {
     const merchantTransactionId = `TXN${Date.now()}${Math.random().toString(36).substr(2, 9)}`;
     const currentUrl = window.location.origin;
-    const redirectUrl = `${currentUrl}/payment/status?merchantTransactionId=${merchantTransactionId}`;
+    const redirectUrl = `${currentUrl}/payment/status?merchantTransactionId=${merchantTransactionId}&amount=${product.amount}`;
     
     // navigate('/payment/checkout', {
     //   state: {

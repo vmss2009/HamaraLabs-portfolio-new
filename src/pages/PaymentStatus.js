@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Bars } from 'react-loader-spinner';
+import { useReactToPrint } from 'react-to-print';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Receipt from '../components/Receipt';
 import './PaymentStatus.css';
 
 function PaymentStatus() {
@@ -12,9 +14,15 @@ function PaymentStatus() {
   const [loading, setLoading] = useState(true);
   const [paymentStatus, setPaymentStatus] = useState(null);
   const [error, setError] = useState(null);
+  const receiptRef = useRef(null);
 
   const merchantTransactionId = searchParams.get('merchantTransactionId');
   const merchantId = '{merchantId}';
+
+  const handlePrint = useReactToPrint({
+    contentRef: receiptRef,
+    documentTitle: `Receipt-${merchantTransactionId}`,
+  });
 
   useEffect(() => {
     const checkPaymentStatus = async () => {
@@ -94,6 +102,32 @@ function PaymentStatus() {
                      paymentStatus?.data?.message?.includes('TRANSACTION_NOT_FOUND');
   
   const transactionId = paymentStatus?.data?.data?.transactionId || 'N/A';
+  const amount = searchParams.get('amount') || paymentStatus?.data?.data?.amount || '0';
+
+  // Prepare receipt data for successful payments
+  const receiptData = isSuccess ? {
+    date: new Date().toLocaleDateString('en-IN', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    }),
+    merchantTransactionId: merchantTransactionId,
+    transactionId: transactionId !== 'N/A' ? transactionId : null,
+    paidBy: paymentStatus?.data?.data?.paymentInstrument?.accountHolderName || 'Customer',
+    paymentMethod: paymentStatus?.data?.data?.paymentInstrument?.type || null,
+    items: [
+      {
+        description: 'Product Purchase',
+        quantity: 1,
+        price: amount,
+        total: amount
+      }
+    ],
+    amount: amount,
+    notes: 'Thank you for your purchase! This is your official payment receipt.'
+  } : null;
 
   // Handle transaction not found case
   if (isNotFound) {
@@ -154,6 +188,11 @@ function PaymentStatus() {
             <button className="status-btn primary" onClick={() => navigate('/')}>
               Go to Home
             </button>
+            {isSuccess && (
+              <button className="status-btn secondary" onClick={handlePrint}>
+                Download Receipt
+              </button>
+            )}
             {!isSuccess && (
               <button className="status-btn secondary" onClick={() => navigate('/buy')}>
                 Try Again
@@ -162,6 +201,11 @@ function PaymentStatus() {
           </div>
         </div>
       </div>
+      {isSuccess && (
+        <div style={{ display: 'none' }}>
+          <Receipt ref={receiptRef} receiptData={receiptData} />
+        </div>
+      )}
       <Footer />
     </>
   );
