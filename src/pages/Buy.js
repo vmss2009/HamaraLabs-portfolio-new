@@ -1,36 +1,70 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './Buy.css';
 
 function Buy() {
+  const navigate = useNavigate();
+
+  const products = [
+    {
+      id: 1,
+      name: 'Individual tinkering activity',
+      amount: 1,
+      description: null
+    },
+    {
+      id: 2,
+      name: 'Onboarding phase',
+      amount: 100000,
+      description: null
+    },
+    {
+      id: 3,
+      name: 'Competition phase',
+      amount: 200000,
+      description: null
+    }
+  ];
+
+  const handleBuyNow = (product) => {
+    const merchantTransactionId = `TXN${Date.now()}${Math.random().toString(36).substr(2, 9)}`;
+    const currentUrl = window.location.origin;
+    const redirectUrl = `${currentUrl}/payment/status?merchantTransactionId=${merchantTransactionId}`;
+    
+    // navigate('/payment/checkout', {
+    //   state: {
+    //     amount: product.amount,
+    //     merchantTransactionId,
+    //     redirectUrl,
+    //     productName: product.name
+    //   }
+    // });
+    const url = `https://hamaralabs.com/payment/checkout?amount=${product.amount}&merchantTransactionId=${merchantTransactionId}&redirectUrl=${redirectUrl}&productName=${product.name}`;
+
+    window.location.href = url;
+  };
+
   return (
     <>
       <Header />
       <main className="buy-page">
         <section className="buy-hero">
           <h1>Buy Our Products</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Select a product to proceed with payment</p>
         </section>
         
         <section className="buy-content">
-          <div className="product-card">
-            <h2>Product 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante dapibus diam.</p>
-            <button className="buy-btn">Learn More</button>
-          </div>
-          
-          <div className="product-card">
-            <h2>Product 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante dapibus diam.</p>
-            <button className="buy-btn">Learn More</button>
-          </div>
-          
-          <div className="product-card">
-            <h2>Product 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante dapibus diam.</p>
-            <button className="buy-btn">Learn More</button>
-          </div>
+          {products.map(product => (
+            <div key={product.id} className="product-card">
+              <h2>{product.name}</h2>
+              <div className="product-price">₹{product.amount.toLocaleString('en-IN')}</div>
+              <button className="buy-btn" onClick={() => handleBuyNow(product)}>
+                Buy Now
+              </button>
+            </div>
+          ))}
         </section>
       </main>
       <Footer />

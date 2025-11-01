@@ -48,6 +48,13 @@
   color: var(--text-primary);
 }
 
+.product-price {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--purple-600);
+  margin: 16px 0 24px 0;
+}
+
 .product-card p {
   color: var(--text-secondary);
   line-height: 1.6;

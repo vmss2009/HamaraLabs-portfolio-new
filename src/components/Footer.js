@@ -1,9 +1,13 @@
 import React from 'react';
 import './Footer.css';
 
-function Footer() {
+function Footer({ backgroundColor }) {
+  const footerStyle = backgroundColor 
+    ? { background: `linear-gradient(135deg, ${backgroundColor}, ${backgroundColor}dd)` }
+    : {};
+
   return (
-    <footer className="footer">
+    <footer className="footer" style={footerStyle}>
       <div className="footer__content">
         <div className="footer__section">
           <h3>About Us</h3>
