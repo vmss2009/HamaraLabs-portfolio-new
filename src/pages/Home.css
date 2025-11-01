@@ -1,0 +1,220 @@
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+}
+
+.info-card {
+  grid-column: span 3;
+  background: linear-gradient(160deg, var(--purple-700), var(--purple-600));
+  color: #f1f0ff;
+  border-radius: var(--radius-card);
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.info-card h2 {
+  font-size: clamp(1.2rem, 2.6vw, 2rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.info-card p {
+  margin: 0;
+  color: rgba(241, 240, 255, 0.82);
+  line-height: 1.6;
+}
+
+.info-card__footnote {
+  font-size: 0.85rem;
+  color: rgba(241, 240, 255, 0.64);
+}
+
+.impact-card {
+  grid-column: span 6;
+  position: relative;
+  background: var(--orange-400);
+  color: rgba(58, 30, 8, 0.92);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  padding: clamp(24px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 3.5vw, 40px);
+  box-shadow: var(--shadow-soft);
+}
+
+.impact-card__content h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  letter-spacing: -2px;
+}
+
+.impact-card__content h3 {
+  margin: 12px 0 16px;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  font-weight: 700;
+}
+
+.impact-card__content p {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(58, 30, 8, 0.78);
+}
+
+.impact-card__cta {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 2px solid rgba(58, 30, 8, 0.75);
+  background: transparent;
+  color: rgba(58, 30, 8, 0.9);
+  font-weight: 600;
+  align-self: flex-start;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.impact-card__cta:hover,
+.impact-card__cta:focus {
+  background: rgba(58, 30, 8, 0.12);
+}
+
+.impact-card__chart {
+  width: 100%;
+  max-height: 140px;
+  color: rgba(58, 30, 8, 0.75);
+}
+
+.photo-card {
+  grid-column: span 3;
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: linear-gradient(135deg, #ebe9ff 0%, #f6f6ff 100%);
+  min-height: clamp(240px, 32vw, 320px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.photo-card__image {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=60');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  opacity: 0.92;
+}
+
+.photo-card__bubble {
+  position: relative;
+  z-index: 1;
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  color: var(--purple-700);
+  box-shadow: 0 12px 24px rgba(86, 51, 182, 0.2);
+}
+
+.photo-card__bubble--one {
+  align-self: flex-start;
+  margin-bottom: 24px;
+}
+
+.photo-card__bubble--two {
+  margin: 0;
+  transform: translateX(-24px);
+}
+
+.cta-grid {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(16px, 2.8vw, 24px);
+  margin-top: clamp(8px, 2vw, 20px);
+}
+
+.cta-card {
+  border-radius: 24px;
+  padding: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1f1f1f;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.cta-card--sun {
+  background: var(--yellow-300);
+}
+
+.cta-card--leaf {
+  background: var(--green-400);
+  color: #ffffff;
+}
+
+.cta-card--leaf:hover,
+.cta-card--leaf:focus {
+  color: #ffffff;
+}
+
+.cta-card--art {
+  background: var(--mint-300);
+  color: var(--purple-700);
+}
+
+.cta-card svg {
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(80px, 10vw, 120px);
+}
+
+.cta-card:hover,
+.cta-card:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(59, 47, 148, 0.18);
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .info-card {
+    grid-column: span 8;
+  }
+
+  .impact-card {
+    grid-column: span 8;
+  }
+
+  .photo-card {
+    grid-column: span 8;
+  }
+}
+
+@media (max-width: 720px) {
+  .photo-card__bubble--two {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .impact-card__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
