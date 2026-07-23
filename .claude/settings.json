@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/mohan/Downloads/**)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(npm ls *)",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(grep -iE \"error|failed to compile\" /tmp/cra-dev.log | head -30 *)",
+      "Read(//private/tmp/**)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-mohan-Projects-HamaraLabs-ReactJS-hamaralabs-portfolio-new/40974721-ef20-4770-a5b4-0b9dc8cad4e0/scratchpad)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(npx playwright *)",
+      "Bash(node shot.js)",
+      "Bash(node shot-mobile.js)",
+      "Bash(lsof -ti:3000 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(node shot2.js)",
+      "Bash(node shot-nav.js)"
+    ]
+  }
+}
