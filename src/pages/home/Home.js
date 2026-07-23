@@ -139,39 +139,38 @@ function Home() {
       <Header />
       <main className="home" ref={mainRef}>
         <section className="home-hero">
-          <div className="home-hero__grid">
-            <div>
-              <span className="home-eyebrow">For parents of Classes 6–9</span>
-              <h1 className="home-hero__title">
-                Degrees get interviews.
-                <br />
-                <span className="home-hero__accent">Skills get careers.</span>
-              </h1>
-              <p className="home-hero__lede">
-                Your child can write code — school covers that. Can they make a sensor talk to
-                an app that controls a machine? Can they run AlphaFold to predict a protein's
-                structure? Those are the skills of 2035. We start building them in Class 6, not
-                after graduation.
-              </p>
-              <div className="home-hero__ctas">
-                <a className="home-btn home-btn--primary home-btn--big" href="#demo">
-                  Book a free demo session
-                </a>
-                <a className="home-btn home-btn--ghost" href="#how">
-                  See how it works
-                </a>
-              </div>
-              <p className="home-hero__note">
-                In-person demo · Your child builds something in session 1 ·{' '}
-                <b>No payment, no pressure</b>
-              </p>
+          <div className="home-hero__content">
+            <span className="home-eyebrow">For parents of Classes 6–9</span>
+            <h1 className="home-hero__title">
+              Degrees get interviews.
+              <br />
+              <span className="home-hero__accent">Skills get careers.</span>
+            </h1>
+            <p className="home-hero__lede">
+              Your child can write code — school covers that. Can they make a sensor talk to
+              an app that controls a machine? Can they run AlphaFold to predict a protein's
+              structure? Those are the skills of 2035. We start building them in Class 6, not
+              after graduation.
+            </p>
+            <div className="home-hero__ctas">
+              <a className="home-btn home-btn--primary home-btn--big" href="#demo">
+                Book a free demo session
+              </a>
+              <a className="home-btn home-btn--ghost" href="#how">
+                See how it works
+              </a>
             </div>
+            <p className="home-hero__note">
+              In-person demo · Your child builds something in session 1 ·{' '}
+              <b>No payment, no pressure</b>
+            </p>
+          </div>
 
-            <div className="home-hero__visuals">
-              <figure
-                className="home-pipeline home-reveal"
-                aria-label="Animated diagram: a sensor sends data to a controller, then to an app, which controls a machine"
-              >
+          <div className="home-hero__visuals">
+            <figure
+              className="home-pipeline home-reveal"
+              aria-label="Animated diagram: a sensor sends data to a controller, then to an app, which controls a machine"
+            >
                 <div className="home-pipeline__header">
                   <span>ENGINEERING · CLASS 8</span>
                   <span className="home-pipeline__live">● LIVE</span>
@@ -322,8 +321,7 @@ function Home() {
                   An amino-acid sequence folded into 3D with AlphaFold —{' '}
                   <b>run and interpreted by a Class 9 student.</b>
                 </figcaption>
-              </figure>
-            </div>
+            </figure>
           </div>
         </section>
 
@@ -497,7 +495,7 @@ function Home() {
               session; you watch, ask anything, and talk to parents whose kids are already
               winning. No payment details, no follow-up spam.
             </p>
-            <a className="home-btn home-btn--accent home-btn--big" href="tel:+919999999999">
+            <a className="home-btn home-btn--accent home-btn--big" href="tel:+918985315423">
               Book a free demo session
             </a>
             <p className="home-cta__fine">

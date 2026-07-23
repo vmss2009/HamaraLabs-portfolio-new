@@ -9,6 +9,8 @@ function Checkout() {
 
     const { amount, merchantTransactionId, redirectUrl, productName } = location.state || {};
 
+    console.log('Checkout state:', { amount, merchantTransactionId, redirectUrl, productName });
+
     const handleCheckout = async () => {
         if (amount !== undefined && merchantTransactionId !== undefined && redirectUrl !== undefined) {
             setLoading(true);

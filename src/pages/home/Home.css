@@ -107,11 +107,10 @@
   padding: clamp(8px, 2vw, 24px) 0 clamp(24px, 4vw, 40px);
 }
 
-.home-hero__grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(24px, 4vw, 40px);
-  align-items: start;
+.home-hero__content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .home-hero__title {
@@ -142,11 +141,11 @@
 }
 
 .home-hero__lede {
-  margin-top: 20px;
+  margin: 20px auto 0;
   font-size: 1.15rem;
   line-height: 1.6;
   color: var(--text-secondary);
-  max-width: 34em;
+  max-width: 42em;
 }
 
 .home-hero__ctas {
@@ -155,6 +154,7 @@
   gap: 14px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .home-hero__note {
@@ -170,27 +170,32 @@
 
 .home-hero__visuals {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 420px;
-  margin-left: auto;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 24px;
+  margin-top: clamp(32px, 5vw, 48px);
+}
+
+.home-hero__visuals .home-pipeline {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 /* pipeline diagram cards */
 .home-pipeline {
   background: linear-gradient(135deg, var(--purple-700), var(--purple-600));
-  border-radius: 20px;
-  padding: 16px 16px 12px;
+  border-radius: 24px;
+  padding: 26px 24px 20px;
   box-shadow: 0 24px 50px -20px rgba(59, 47, 148, 0.45);
 }
 
 .home-pipeline__header {
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(241, 240, 255, 0.8);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   display: flex;
   justify-content: space-between;
 }
@@ -210,8 +215,8 @@
 }
 
 .home-pipeline__caption {
-  margin-top: 6px;
-  font-size: 0.78rem;
+  margin-top: 10px;
+  font-size: 0.92rem;
   color: rgba(241, 240, 255, 0.85);
   text-align: center;
 }
@@ -619,12 +624,21 @@
 
 /* responsive */
 @media (max-width: 960px) {
-  .home-hero__grid {
-    grid-template-columns: 1fr;
-  }
   .home-hero__visuals {
-    max-width: none;
-    margin-left: 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .home-pipeline {
+    border-radius: 20px;
+    padding: 16px 16px 12px;
+  }
+  .home-pipeline__header {
+    font-size: 0.66rem;
+    margin-bottom: 4px;
+  }
+  .home-pipeline__caption {
+    margin-top: 6px;
+    font-size: 0.78rem;
   }
   .home-steps {
     grid-template-columns: 1fr;

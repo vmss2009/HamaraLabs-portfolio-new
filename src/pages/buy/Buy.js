@@ -10,20 +10,8 @@ function Buy() {
   const products = [
     {
       id: 1,
-      name: 'Individual tinkering activity',
-      amount: 50,
-      description: null
-    },
-    {
-      id: 2,
-      name: 'Onboarding phase',
+      name: 'HamaraLabs Onboarding',
       amount: 100000,
-      description: null
-    },
-    {
-      id: 3,
-      name: 'Competition phase',
-      amount: 200000,
       description: null
     }
   ];
@@ -33,17 +21,17 @@ function Buy() {
     const currentUrl = window.location.origin;
     const redirectUrl = `${currentUrl}/payment/status?merchantTransactionId=${merchantTransactionId}&amount=${product.amount}`;
     
-    // navigate('/payment/checkout', {
-    //   state: {
-    //     amount: product.amount,
-    //     merchantTransactionId,
-    //     redirectUrl,
-    //     productName: product.name
-    //   }
-    // });
-    const url = `http://localhost:5500/payment/checkout/index.html?amount=${product.amount}&merchantTransactionId=${merchantTransactionId}&redirectUrl=${encodeURIComponent(redirectUrl)}&productName=${product.name}`;
+    navigate('/payment/checkout', {
+      state: {
+        amount: product.amount,
+        merchantTransactionId,
+        redirectUrl,
+        productName: product.name
+      }
+    });
+    // const url = `http://localhost:3000/payment/checkout?amount=${product.amount}&merchantTransactionId=${merchantTransactionId}&redirectUrl=${encodeURIComponent(redirectUrl)}&productName=${product.name}`;
 
-    window.location.href = url;
+    // window.location.href = url;
   };
 
   return (
