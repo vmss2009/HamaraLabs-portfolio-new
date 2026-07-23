@@ -20,18 +20,15 @@ function Buy() {
     const merchantTransactionId = `TXN${Date.now()}${Math.random().toString(36).substr(2, 9)}`;
     const currentUrl = window.location.origin;
     const redirectUrl = `${currentUrl}/payment/status?merchantTransactionId=${merchantTransactionId}&amount=${product.amount}`;
-    
-    navigate('/payment/checkout', {
-      state: {
-        amount: product.amount,
-        merchantTransactionId,
-        redirectUrl,
-        productName: product.name
-      }
-    });
-    // const url = `http://localhost:3000/payment/checkout?amount=${product.amount}&merchantTransactionId=${merchantTransactionId}&redirectUrl=${encodeURIComponent(redirectUrl)}&productName=${product.name}`;
 
-    // window.location.href = url;
+    const params = new URLSearchParams({
+      amount: product.amount,
+      merchantTransactionId,
+      redirectUrl,
+      productName: product.name
+    });
+
+    navigate(`/payment/checkout?${params.toString()}`);
   };
 
   return (

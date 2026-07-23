@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { Bars } from "react-loader-spinner";
 
 function Checkout() {
-    const location = useLocation();
+    const [searchParams] = useSearchParams();
     const [loading, setLoading] = useState(false);
 
-    const { amount, merchantTransactionId, redirectUrl, productName } = location.state || {};
-
-    console.log('Checkout state:', { amount, merchantTransactionId, redirectUrl, productName });
+    const amountParam = searchParams.get('amount');
+    const amount = amountParam !== null ? Number(amountParam) : undefined;
+    const merchantTransactionId = searchParams.get('merchantTransactionId') || undefined;
+    const redirectUrl = searchParams.get('redirectUrl') || undefined;
+    const productName = searchParams.get('productName') || undefined;
 
     const handleCheckout = async () => {
         if (amount !== undefined && merchantTransactionId !== undefined && redirectUrl !== undefined) {
