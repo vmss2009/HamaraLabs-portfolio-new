@@ -3,9 +3,9 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Bars } from 'react-loader-spinner';
 import { useReactToPrint } from 'react-to-print';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Receipt from '../components/Receipt';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Receipt from '../../components/Receipt';
 import './PaymentStatus.css';
 
 function PaymentStatus() {

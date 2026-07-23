@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useLocation } from "react-router-dom";
-import {Bars} from "react-loader-spinner";
+import { Bars } from "react-loader-spinner";
 
 function Checkout() {
     const location = useLocation();
@@ -76,9 +76,6 @@ function Checkout() {
                 )}
                 <div style={{ marginBottom: '20px' }}>
                     Amount: <strong>₹ {amount?.toLocaleString('en-IN')}</strong>
-                </div>
-                <div style={{ marginBottom: '20px', fontSize: '14px', color: '#666' }}>
-                    Transaction ID: {merchantTransactionId}
                 </div>
                 <button
                 onClick={handleCheckout}

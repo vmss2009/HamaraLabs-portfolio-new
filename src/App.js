@@ -1,14 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Buy from './pages/Buy';
-import HomeSchoolers from './pages/HomeSchoolers';
-import Students from './pages/Students';
-import ATLs from './pages/ATLs';
-import Checkout from './pages/Checkout';
-import PaymentStatus from './pages/PaymentStatus';
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import Refund from './pages/Refund';
+import Home from './pages/home/Home';
+import Buy from './pages/buy/Buy';
+import Checkout from './pages/payments/checkout/Checkout';
+import PaymentStatus from './pages/payments/PaymentStatus';
+import Terms from './pages/legal-agreements/terms/Terms';
+import Privacy from './pages/legal-agreements/privacy-policy/Privacy';
+import Refund from './pages/legal-agreements/refund-policy/Refund';
 import './App.css';
 
 function App() {
@@ -18,9 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/buy" element={<Buy />} />
-          <Route path="/homeschoolers" element={<HomeSchoolers />} />
-          <Route path="/students" element={<Students />} />
-          <Route path="/atls" element={<ATLs />} />
           <Route path="/payment/checkout" element={<Checkout />} />
           <Route path="/payment/status" element={<PaymentStatus />} />
           <Route path="/terms" element={<Terms />} />

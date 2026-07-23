@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import './Buy.css';
 
 function Buy() {
@@ -41,7 +41,7 @@ function Buy() {
     //     productName: product.name
     //   }
     // });
-    const url = `https://hamaralabs.com/payment/checkout?amount=${product.amount}&merchantTransactionId=${merchantTransactionId}&redirectUrl=${redirectUrl}&productName=${product.name}`;
+    const url = `http://localhost:5500/payment/checkout/index.html?amount=${product.amount}&merchantTransactionId=${merchantTransactionId}&redirectUrl=${encodeURIComponent(redirectUrl)}&productName=${product.name}`;
 
     window.location.href = url;
   };
