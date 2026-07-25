@@ -13,13 +13,13 @@ function Privacy() {
           
           <div className="privacy-content">
             <p>
-              Hamara Labs PVT LTD. ("We") are committed to protecting and respecting your privacy.
+              SketchEA IT Consultants ("We") are committed to protecting and respecting your privacy.
             </p>
             <p>
-              Hamara Labs PVT LTD. provides online contents through mobile applications like KettleMind ("Apps") and websites like www.kettlemind.com (the "Websites")
+              SketchEA IT Consultants Private Limited provides support services through HamaraLabs website and web application.
             </p>
             <p>
-              By using the Websites and/or using any of our Apps, you consent to us processing your personal information in accordance with this Privacy and Cookie Policy (the "Policy"). This is the legal basis upon which we process your personal information as well. It is necessary for the performance of our obligations under the terms of use/terms and conditions you accept to use our Apps or the Websites. You may withdraw such consent at any time by letting us know at <a href="mailto:raja@hamaralabs.com">raja@hamaralabs.com</a>. At that time, you may also want to remove any cookies which have been placed on any device used to access the Websites. Your withdrawal of consent will not affect the lawfulness of any processing carried out by us prior to such withdrawal.
+              By using the Websites and/or using any of our Apps, you consent to us processing your personal information in accordance with this Privacy and Cookie Policy (the "Policy"). This is the legal basis upon which we process your personal information as well. It is necessary for the performance of our obligations under the terms of use/terms and conditions you accept to use our Apps or the Websites. You may withdraw such consent at any time by letting us know at <a href="mailto:contact@hamaralabs.com">contact@hamaralabs.com</a>. At that time, you may also want to remove any cookies which have been placed on any device used to access the Websites. Your withdrawal of consent will not affect the lawfulness of any processing carried out by us prior to such withdrawal.
             </p>
 
             <h2>THIS IS THE INFORMATION WE MAY COLLECT ABOUT YOU</h2>
@@ -41,7 +41,7 @@ function Privacy() {
 
             <h3>4. Information we may collect when you use an App</h3>
             <p>
-              We collect information when you use our Apps on how you use those Apps and how you play the games in them. For example, we will note how you interact with our games, how you perform and what scores you achieve. We also take note of when you choose to share your achievements with friends on Facebook and if you choose to pay for versions of our Apps such as KettleMind Pro.
+              We collect information when you use our Apps on how you use those Apps and how you play the games in them. For example, we will note how you interact with our games, how you perform and what scores you achieve. We also take note of when you choose to share your achievements with friends on Facebook and if you choose to pay for versions of our apps.
             </p>
 
             <h3>5. Information we may collect about the device you use to access and use an App</h3>
@@ -81,7 +81,7 @@ function Privacy() {
 
             <h2>KEEPING INFORMATION SECURE</h2>
             <p>
-              We make reasonable efforts to protect your Personal Information, but no company, including Hamara Labs PVT LTD., can fully eliminate security risks connected to handling information on the internet. Moreover, we can't be in charge of any of your Personal Information that you discharge with anyone else, or that you ask for or approve us to discharge.
+              We make reasonable efforts to protect your Personal Information, but no company, including SketchEA IT Consultants, can fully eliminate security risks connected to handling information on the internet. Moreover, we can't be in charge of any of your Personal Information that you discharge with anyone else, or that you ask for or approve us to discharge.
             </p>
 
             <h2>THIRD PARTY PROPERTIES ACCESSED FROM A WEBSITE AND/OR APP</h2>
@@ -91,11 +91,11 @@ function Privacy() {
 
             <h2>HOW TO CONTACT US</h2>
             <p>
-              We truly do welcome any enquiries, remarks, and demands you may have with respect to this Policy. You can get in touch with us by messaging us at <a href="mailto:raja@hamaralabs.com">raja@hamaralabs.com</a>
+              We truly do welcome any enquiries, remarks, and demands you may have with respect to this Policy. You can get in touch with us by messaging us at <a href="mailto:contact@hamaralabs.com">contact@hamaralabs.com</a>
             </p>
 
             <div className="privacy-footer">
-              <p>© {new Date().getFullYear()} Hamara Labs PVT LTD. Privacy Policy Terms of Services</p>
+              <p>© {new Date().getFullYear()} SketchEA IT Consultants pvt Ltd. Privacy Policy Terms of Services</p>
             </div>
           </div>
         </div>

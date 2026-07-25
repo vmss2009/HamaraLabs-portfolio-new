@@ -153,7 +153,12 @@ function Home() {
               after graduation.
             </p>
             <div className="home-hero__ctas">
-              <a className="home-btn home-btn--primary home-btn--big" href="#demo">
+              <a
+                className="home-btn home-btn--primary home-btn--big"
+                href="https://wa.me/message/SBWZR7CTGXFXI1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Book a free demo session
               </a>
               <a className="home-btn home-btn--ghost" href="#how">
@@ -495,7 +500,12 @@ function Home() {
               session; you watch, ask anything, and talk to parents whose kids are already
               winning. No payment details, no follow-up spam.
             </p>
-            <a className="home-btn home-btn--accent home-btn--big" href="tel:+918985315423">
+            <a
+              className="home-btn home-btn--accent home-btn--big"
+              href="https://wa.me/message/SBWZR7CTGXFXI1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book a free demo session
             </a>
             <p className="home-cta__fine">
