@@ -33,6 +33,7 @@ function Header() {
       >
         <Link to="/" onClick={closeMenu}>Home</Link>
         <Link to="/buy" onClick={closeMenu}>Buy</Link>
+        <Link to="/blog" onClick={closeMenu}>Blog</Link>
         <a
           href="https://app.hamaralabs.com"
           target="_blank"
