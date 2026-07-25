@@ -6,6 +6,8 @@ import PaymentStatus from './pages/payments/PaymentStatus';
 import Terms from './pages/legal-agreements/terms/Terms';
 import Privacy from './pages/legal-agreements/privacy-policy/Privacy';
 import Refund from './pages/legal-agreements/refund-policy/Refund';
+import BlogList from './pages/blog/BlogList';
+import BlogArticle from './pages/blog/BlogArticle';
 import NotFound from './pages/not-found/NotFound';
 import './App.css';
 
@@ -21,6 +23,8 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

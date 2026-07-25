@@ -32,6 +32,7 @@ function Header() {
         className={`top-nav__menu${isMenuOpen ? ' top-nav__menu--open' : ''}`}
       >
         <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/blog" onClick={closeMenu}>Blog</Link>
         <Link to="/buy" onClick={closeMenu}>Buy</Link>
         <a
           href="https://app.hamaralabs.com"
