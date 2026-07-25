@@ -6,6 +6,7 @@ import PaymentStatus from './pages/payments/PaymentStatus';
 import Terms from './pages/legal-agreements/terms/Terms';
 import Privacy from './pages/legal-agreements/privacy-policy/Privacy';
 import Refund from './pages/legal-agreements/refund-policy/Refund';
+import NotFound from './pages/not-found/NotFound';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>

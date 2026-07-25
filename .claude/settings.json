@@ -20,7 +20,8 @@
       "Bash(node shot-nav.js)",
       "Bash(node shot3.js)",
       "Bash(node shot4.js)",
-      "Bash(node shot-checkout.js)"
+      "Bash(node shot-checkout.js)",
+      "Bash(node shot-404.js)"
     ],
     "additionalDirectories": [
       "/private/tmp/claude-501/-Users-mohan-Projects-HamaraLabs-ReactJS-hamaralabs-portfolio-new/40974721-ef20-4770-a5b4-0b9dc8cad4e0/scratchpad"
