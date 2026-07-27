@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import NotFound from '../not-found/NotFound';
 import ARTICLES from './articles';
 import './BlogArticle.css';
@@ -15,20 +13,18 @@ function BlogArticle() {
   }
 
   return (
-    <>
-      <Header />
-      <main className="blog-article">
+    <main className="blog-article">
+      <div className="blog-article__layout">
         <Link to="/blog" className="blog-article__back">
-          ← Back to all articles
+          ← Back
         </Link>
         <iframe
           src={article.src}
           title={article.title}
           className="blog-article__frame"
         />
-      </main>
-      <Footer />
-    </>
+      </div>
+    </main>
   );
 }
 

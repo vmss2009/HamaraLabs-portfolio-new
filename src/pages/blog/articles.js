@@ -2,11 +2,25 @@
 // published Google Doc/Slides/Sheets link, or any other embeddable URL).
 const ARTICLES = [
   {
-    slug: 'wires-to-a-working-game',
-    title: 'Wires to a Working Game',
+    slug: 'from-wires-to-a-working-game',
+    title: 'From Wires to a Working Game',
     date: '25-07-2026',
     intro: 'How Rohan Built a Sort Game with Arduino.',
     src: 'https://docs.google.com/document/d/11b4BGHkS6cnvAY0l2b-vaLk5Kbce2nqZ/preview',
+  },
+  {
+    slug: 'remember-the-danger-zones',
+    title: 'Remember the Danger Zones',
+    date: '20-06-2026',
+    intro: 'How Devi Built a Memory-Maze Game with Arduino.',
+    src: 'https://docs.google.com/document/d/1sF3yHWSnzg_afNYpariKE5BAqgG8c32h/preview',
+  },
+  {
+    slug: 'from-blinking-lights-to-a-real-game',
+    title: 'From Blinking Lights to a Real Game',
+    date: '05-05-2026',
+    intro: 'How Ishaan Built a Number-Sorting Game with Arduino',
+    src: 'https://docs.google.com/document/d/15kQwHKmMeKtL19LvH3p6ry3VM9d9zQG4/preview',
   },
 ];
 
