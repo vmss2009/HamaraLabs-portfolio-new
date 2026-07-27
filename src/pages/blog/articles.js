@@ -22,6 +22,14 @@ const ARTICLES = [
     intro: 'How Ishaan Built a Number-Sorting Game with Arduino',
     src: 'https://docs.google.com/document/d/15kQwHKmMeKtL19LvH3p6ry3VM9d9zQG4/preview',
   },
+  {
+    slug: 'alphafold-3-to-predict-protein-structure-and-interactions',
+    title: 'AlphaFold 3 to predict protein structure and interactions',
+    date: '05-05-2026',
+    intro: 'How Mohan used AlphaFold 3 to predict protein structure and interactions',
+    src: 'https://docs.google.com/document/d/1VRxIGC9JWDXE7I3b30FJFOZ1amuj5MddSFUwhqjIf9E/preview',
+  },
+  
 ];
 
 export default ARTICLES;
