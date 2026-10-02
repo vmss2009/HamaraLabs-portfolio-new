@@ -29,7 +29,13 @@ const ARTICLES = [
     intro: 'How Mohan used AlphaFold 3 to predict protein structure and interactions',
     src: 'https://docs.google.com/document/d/1VRxIGC9JWDXE7I3b30FJFOZ1amuj5MddSFUwhqjIf9E/preview',
   },
-  
+  {
+    slug: 'microscopy-activities',
+    title: 'Microscopy Activities',
+    date: '27-09-2026',
+    intro: 'How high school students could get curiosity while they view microscopic things using a microscope ?',
+    src: 'https://docs.google.com/document/d/1WJukAWPHqvlL3Zzb5yJ6oINWbxjqBXNzsiiLnd-nsOo/preview',
+  },
 ];
 
 export default ARTICLES;
