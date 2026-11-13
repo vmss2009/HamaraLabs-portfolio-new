@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import './Header.css';
 
-function Header() {
+function Header({ className = '' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="top-nav">
+    <header className={`top-nav${className ? ` ${className}` : ''}`}>
       <Link to="/" className="top-nav__logo" onClick={closeMenu}>
         <img src={logo} alt="Company logo" />
       </Link>

@@ -7,6 +7,16 @@
   margin-left: -12px;
 }
 
+.top-nav--tight {
+  margin-bottom: clamp(4px, 1.2vw, 12px);
+}
+
+@media (max-width: 720px) {
+  .top-nav--tight {
+    row-gap: 0;
+  }
+}
+
 .top-nav__toggle {
   display: none;
   flex-direction: column;
